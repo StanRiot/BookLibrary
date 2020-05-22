@@ -10,7 +10,8 @@ namespace BookLibrary.BLL.Services.Interfaces
         public void Create(T entity);
         public T Get(int id);
         public IEnumerable<T> GetAll();
-        public void Update(T entity);
+        public T Update(T entity);
+        public void Delete(T entity);
 
     }
 }
