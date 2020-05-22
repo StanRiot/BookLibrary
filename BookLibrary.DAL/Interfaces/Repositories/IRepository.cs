@@ -9,7 +9,6 @@ namespace BookLibrary.DAL.Interfaces.Repositories
     public interface IRepository<TEntity> where TEntity : IModel
     {
         TEntity Add(TEntity entity);
-        TEntity AddRange(IEnumerable<TEntity> entities);
 
         TEntity Read(int id);
         IEnumerable<TEntity> GetAll();
