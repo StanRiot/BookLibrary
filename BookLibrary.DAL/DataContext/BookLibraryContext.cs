@@ -8,13 +8,14 @@ namespace BookLibrary.DAL.DataContext
 {
     public class BookLibraryContext: DbContext
     {
-        public BookLibraryContext()
+        public BookLibraryContext(DbContextOptions<BookLibraryContext> options) :base(options)
         {
             
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            optionsBuilder.UseLazyLoadingProxies(true);
             base.OnConfiguring(optionsBuilder);
         }
 
