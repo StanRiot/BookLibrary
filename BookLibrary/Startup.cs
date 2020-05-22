@@ -1,4 +1,8 @@
+using Autofac;
+using BookLibrary.BLL.Services.Implementations;
+using BookLibrary.BLL.Services.Interfaces;
 using BookLibrary.DAL.DataContext;
+using BookLibrary.DAL.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
@@ -21,8 +25,9 @@ namespace BookLibrary
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var connectionString = Configuration.GetConnectionString("MsSqlServer");
             services.AddControllersWithViews();
+
+            var connectionString = Configuration.GetConnectionString("MsSqlServer");
             services.AddDbContext<BookLibraryContext>(
                     options => options.UseSqlServer(connectionString)
                 );
@@ -33,6 +38,18 @@ namespace BookLibrary
                 configuration.RootPath = "ClientApp/build";
             });
         }
+
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+            builder.RegisterType<BookLibraryContext>().AsSelf();
+            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
+
+            builder.RegisterType<BookService>().As<IBookService>();
+            builder.RegisterType<GenreService>().As<IGenreService>();
+            builder.RegisterType<AuthorService>().As<IAuthorService>();
+
+        }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
