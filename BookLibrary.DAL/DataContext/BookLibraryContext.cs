@@ -77,6 +77,7 @@ namespace BookLibrary.DAL.DataContext
                 .HasForeignKey(BA => BA.AuthorId);
 
 
+            modelBuilder.Seed();
             base.OnModelCreating(modelBuilder);
         }
     }
