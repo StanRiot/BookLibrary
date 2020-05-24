@@ -23,16 +23,34 @@ namespace BookLibrary.DAL.DataContext
         {
             modelBuilder.Entity<Book>()
                 .HasKey(B => B.Id);
+            modelBuilder.Entity<Book>()
+                .Property(B => B.Id)
+                .ValueGeneratedOnAdd();
+
+
             modelBuilder.Entity<Author>()
                 .HasKey(A => A.Id);
+            modelBuilder.Entity<Author>()
+                .Property(A => A.Id)
+                .ValueGeneratedOnAdd();
+
             modelBuilder.Entity<Genre>()
                 .HasKey(G => G.Id);
+            modelBuilder.Entity<Genre>()
+                .Property(G => G.Id)
+                .ValueGeneratedOnAdd();
 
             modelBuilder.Entity<BooksAuthors>()
                 .HasKey(BA => BA.Id);
+            modelBuilder.Entity<BooksAuthors>()
+                .Property(BA => BA.Id)
+                .ValueGeneratedOnAdd();
+
             modelBuilder.Entity<BooksGenres>()
                 .HasKey(BG => BG.Id);
-
+            modelBuilder.Entity<BooksGenres>()
+                .Property(BG => BG.Id)
+                .ValueGeneratedOnAdd();
 
 
             modelBuilder.Entity<BooksGenres>()
