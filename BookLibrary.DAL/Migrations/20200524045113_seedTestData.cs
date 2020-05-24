@@ -51,24 +51,25 @@ namespace BookLibrary.DAL.Migrations
 
             migrationBuilder.InsertData(
                 table: "BooksAuthors",
-                columns: new[] { "BookId", "AuthorId" },
+                columns: new[] {"BookId", "AuthorId"},
                 values: new object[,]
                 {
-                    { 1, 1 },
-                    { 5, 2 },
-                    { 5, 1 },
-                    { 4, 3 },
-                    { 4, 2 },
-                    { 4, 1 },
-                    { 3, 3 },
-                    { 5, 3 },
-                    { 3, 1 },
-                    { 2, 3 },
-                    { 2, 2 },
-                    { 2, 1 },
-                    { 1, 3 },
-                    { 1, 2 },
-                    { 3, 2 }
+                    {1, 1},
+                    {2, 1},
+                    {3, 1},
+                    {4, 1},
+                    {5, 1},
+                    {6, 2},
+                    {7, 2},
+                    {8, 2},
+                    {9, 2},
+                    {10, 2},
+                    {11, 2},
+                    {12, 2},
+                    {13, 3},
+                    {14, 3},
+                    {15, 3},
+                    {16, 3}
                 });
 
             migrationBuilder.InsertData(
@@ -90,7 +91,8 @@ namespace BookLibrary.DAL.Migrations
                     { 4, 1 },
                     { 14, 3 },
                     { 3, 2 },
-                    { 15, 3 }
+                    { 15, 3 },
+                    {16 , 1}
                 });
         }
 

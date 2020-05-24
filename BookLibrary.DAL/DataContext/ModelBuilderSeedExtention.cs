@@ -165,16 +165,17 @@ namespace BookLibrary.DAL.DataContext
                     new BooksAuthors() {AuthorId = 1, BookId = 3},
                     new BooksAuthors() {AuthorId = 1, BookId = 4},
                     new BooksAuthors() {AuthorId = 1, BookId = 5},
-                    new BooksAuthors() {AuthorId = 2, BookId = 1},
-                    new BooksAuthors() {AuthorId = 2, BookId = 2},
-                    new BooksAuthors() {AuthorId = 2, BookId = 3},
-                    new BooksAuthors() {AuthorId = 2, BookId = 4},
-                    new BooksAuthors() {AuthorId = 2, BookId = 5},
-                    new BooksAuthors() {AuthorId = 3, BookId = 1},
-                    new BooksAuthors() {AuthorId = 3, BookId = 2},
-                    new BooksAuthors() {AuthorId = 3, BookId = 3},
-                    new BooksAuthors() {AuthorId = 3, BookId = 4},
-                    new BooksAuthors() {AuthorId = 3, BookId = 5}
+                    new BooksAuthors() {AuthorId = 2, BookId = 6},
+                    new BooksAuthors() {AuthorId = 2, BookId = 7},
+                    new BooksAuthors() {AuthorId = 2, BookId = 8},
+                    new BooksAuthors() {AuthorId = 2, BookId = 9},
+                    new BooksAuthors() {AuthorId = 2, BookId = 10},
+                    new BooksAuthors() {AuthorId = 2, BookId = 11},
+                    new BooksAuthors() {AuthorId = 2, BookId = 12},
+                    new BooksAuthors() {AuthorId = 3, BookId = 13},
+                    new BooksAuthors() {AuthorId = 3, BookId = 14},
+                    new BooksAuthors() {AuthorId = 3, BookId = 15},
+                    new BooksAuthors() {AuthorId = 3, BookId = 16}
                 }
             );
 
@@ -195,7 +196,8 @@ namespace BookLibrary.DAL.DataContext
                     new BooksGenres() {BookId = 12, GenreId = 3},
                     new BooksGenres() {BookId = 13, GenreId = 2},
                     new BooksGenres() {BookId = 14, GenreId = 3},
-                    new BooksGenres() {BookId = 15, GenreId = 3}
+                    new BooksGenres() {BookId = 15, GenreId = 3},
+                    new BooksGenres() {BookId = 16, GenreId = 1}
 
                 }
             );

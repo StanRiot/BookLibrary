@@ -10,7 +10,9 @@ namespace BookLibrary.DAL.DataContext
     {
         public BookLibraryContext(DbContextOptions<BookLibraryContext> options) :base(options)
         {
-            
+            //Using Async so that the every request will not
+            //take time to check if the DB has the latest migration
+            Database.Migrate();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
