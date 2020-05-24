@@ -11,9 +11,9 @@ namespace BookLibrary.CORE.Models
 
 
         public int BookId { get; set; }
-        public Book Book { get; set; }
+        public virtual Book Book { get; set; }
 
         public int AuthorId { get; set; }
-        public Author Author  { get; set; }
+        public virtual Author Author  { get; set; }
     }
 }

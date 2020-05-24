@@ -9,6 +9,6 @@ namespace BookLibrary.CORE.Models
     {
         public int Id { get ; set; }
         public string Name { get; set; }
-        public ICollection<BooksGenres> BooksGenres { get; set; }
+        public virtual ICollection<BooksGenres> BooksGenres { get; set; }
     }
 }

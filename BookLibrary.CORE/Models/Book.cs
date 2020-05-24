@@ -9,8 +9,9 @@ namespace BookLibrary.CORE.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public ICollection<BooksGenres> Genres { get; set; }
-        public ICollection<BooksAuthors> Authors { get; set; }
+        public int Year { get; set; }
+        public virtual ICollection<BooksGenres> Genres { get; set; }
+        public virtual ICollection<BooksAuthors> Authors { get; set; }
 
     }
 }
