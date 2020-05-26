@@ -1,4 +1,5 @@
 using Autofac;
+using AutoMapper;
 using BookLibrary.BLL.Services.Implementations;
 using BookLibrary.BLL.Services.Interfaces;
 using BookLibrary.DAL.DataContext;
@@ -31,6 +32,7 @@ namespace BookLibrary
             services.AddDbContext<BookLibraryContext>(
                     options => options.UseSqlServer(connectionString)
                 );
+            services.AddAutoMapper(typeof(Startup));
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
