@@ -7,7 +7,7 @@ using BookLibrary.DAL.Interfaces.Repositories;
 
 namespace BookLibrary.DAL.DataContext
 {
-    public class UnitOfWork: IUnitOfWork
+    public class UnitOfWork: IUnitOfWork, IDisposable
     {
         protected BookLibraryContext _context { get; set; }
         public UnitOfWork(BookLibraryContext context)
@@ -28,6 +28,11 @@ namespace BookLibrary.DAL.DataContext
         public void SaveChanges()
         {
             _context.SaveChanges();
+        }
+
+        public void Dispose()
+        {
+            SaveChanges();
         }
     }
 }

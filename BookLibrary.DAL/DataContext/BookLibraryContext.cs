@@ -42,14 +42,12 @@ namespace BookLibrary.DAL.DataContext
                 .Property(G => G.Id)
                 .ValueGeneratedOnAdd();
 
-            modelBuilder.Entity<BooksAuthors>()
-                .HasKey(BA => BA.Id);
+
             modelBuilder.Entity<BooksAuthors>()
                 .Property(BA => BA.Id)
                 .ValueGeneratedOnAdd();
 
-            modelBuilder.Entity<BooksGenres>()
-                .HasKey(BG => BG.Id);
+
             modelBuilder.Entity<BooksGenres>()
                 .Property(BG => BG.Id)
                 .ValueGeneratedOnAdd();

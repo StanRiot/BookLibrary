@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookLibrary.DAL.Migrations
 {
     [DbContext(typeof(BookLibraryContext))]
-    [Migration("20200524045113_seedTestData")]
-    partial class seedTestData
+    [Migration("20200526043129_seedingData")]
+    partial class seedingData
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -283,8 +283,7 @@ namespace BookLibrary.DAL.Migrations
                             BookId = 16,
                             AuthorId = 3,
                             Id = 0
-                        }
-                    );
+                        });
                 });
 
             modelBuilder.Entity("BookLibrary.CORE.Models.BooksGenres", b =>
@@ -396,7 +395,7 @@ namespace BookLibrary.DAL.Migrations
                             BookId = 15,
                             GenreId = 3,
                             Id = 0
-                        }, 
+                        },
                         new
                         {
                             BookId = 16,

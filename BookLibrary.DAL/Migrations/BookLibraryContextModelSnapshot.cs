@@ -218,61 +218,67 @@ namespace BookLibrary.DAL.Migrations
                         },
                         new
                         {
-                            BookId = 1,
+                            BookId = 6,
                             AuthorId = 2,
                             Id = 0
                         },
                         new
                         {
-                            BookId = 2,
+                            BookId = 7,
                             AuthorId = 2,
                             Id = 0
                         },
                         new
                         {
-                            BookId = 3,
+                            BookId = 8,
                             AuthorId = 2,
                             Id = 0
                         },
                         new
                         {
-                            BookId = 4,
+                            BookId = 9,
                             AuthorId = 2,
                             Id = 0
                         },
                         new
                         {
-                            BookId = 5,
+                            BookId = 10,
                             AuthorId = 2,
                             Id = 0
                         },
                         new
                         {
-                            BookId = 1,
+                            BookId = 11,
+                            AuthorId = 2,
+                            Id = 0
+                        },
+                        new
+                        {
+                            BookId = 12,
+                            AuthorId = 2,
+                            Id = 0
+                        },
+                        new
+                        {
+                            BookId = 13,
                             AuthorId = 3,
                             Id = 0
                         },
                         new
                         {
-                            BookId = 2,
+                            BookId = 14,
                             AuthorId = 3,
                             Id = 0
                         },
                         new
                         {
-                            BookId = 3,
+                            BookId = 15,
                             AuthorId = 3,
                             Id = 0
                         },
                         new
                         {
-                            BookId = 4,
-                            AuthorId = 3,
-                            Id = 0
-                        },
-                        new
-                        {
-                            BookId = 5,
+                            BookId = 16,
                             AuthorId = 3,
                             Id = 0
                         });
@@ -386,6 +392,12 @@ namespace BookLibrary.DAL.Migrations
                         {
                             BookId = 15,
                             GenreId = 3,
+                            Id = 0
+                        },
+                        new
+                        {
+                            BookId = 16,
+                            GenreId = 1,
                             Id = 0
                         });
                 });

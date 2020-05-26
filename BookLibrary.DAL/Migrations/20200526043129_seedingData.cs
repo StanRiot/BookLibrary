@@ -2,7 +2,7 @@
 
 namespace BookLibrary.DAL.Migrations
 {
-    public partial class seedTestData : Migration
+    public partial class seedingData : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -51,25 +51,25 @@ namespace BookLibrary.DAL.Migrations
 
             migrationBuilder.InsertData(
                 table: "BooksAuthors",
-                columns: new[] {"BookId", "AuthorId"},
+                columns: new[] { "BookId", "AuthorId" },
                 values: new object[,]
                 {
-                    {1, 1},
-                    {2, 1},
-                    {3, 1},
-                    {4, 1},
-                    {5, 1},
-                    {6, 2},
-                    {7, 2},
-                    {8, 2},
-                    {9, 2},
-                    {10, 2},
-                    {11, 2},
-                    {12, 2},
-                    {13, 3},
-                    {14, 3},
-                    {15, 3},
-                    {16, 3}
+                    { 1, 1 },
+                    { 15, 3 },
+                    { 14, 3 },
+                    { 13, 3 },
+                    { 12, 2 },
+                    { 11, 2 },
+                    { 10, 2 },
+                    { 9, 2 },
+                    { 16, 3 },
+                    { 7, 2 },
+                    { 6, 2 },
+                    { 5, 1 },
+                    { 4, 1 },
+                    { 3, 1 },
+                    { 2, 1 },
+                    { 8, 2 }
                 });
 
             migrationBuilder.InsertData(
@@ -83,40 +83,25 @@ namespace BookLibrary.DAL.Migrations
                     { 1, 3 },
                     { 13, 2 },
                     { 7, 2 },
-                    { 8, 1 },
-                    { 2, 2 },
+                    { 3, 2 },
                     { 11, 1 },
+                    { 16, 1 },
+                    { 8, 1 },
                     { 6, 1 },
                     { 5, 1 },
                     { 4, 1 },
                     { 14, 3 },
-                    { 3, 2 },
-                    { 15, 3 },
-                    {16 , 1}
+                    { 2, 2 },
+                    { 15, 3 }
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DeleteData(
-                table: "Book",
-                keyColumn: "Id",
-                keyValue: 16);
-
-            migrationBuilder.DeleteData(
                 table: "BooksAuthors",
                 keyColumns: new[] { "BookId", "AuthorId" },
                 keyValues: new object[] { 1, 1 });
-
-            migrationBuilder.DeleteData(
-                table: "BooksAuthors",
-                keyColumns: new[] { "BookId", "AuthorId" },
-                keyValues: new object[] { 1, 2 });
-
-            migrationBuilder.DeleteData(
-                table: "BooksAuthors",
-                keyColumns: new[] { "BookId", "AuthorId" },
-                keyValues: new object[] { 1, 3 });
 
             migrationBuilder.DeleteData(
                 table: "BooksAuthors",
@@ -126,27 +111,7 @@ namespace BookLibrary.DAL.Migrations
             migrationBuilder.DeleteData(
                 table: "BooksAuthors",
                 keyColumns: new[] { "BookId", "AuthorId" },
-                keyValues: new object[] { 2, 2 });
-
-            migrationBuilder.DeleteData(
-                table: "BooksAuthors",
-                keyColumns: new[] { "BookId", "AuthorId" },
-                keyValues: new object[] { 2, 3 });
-
-            migrationBuilder.DeleteData(
-                table: "BooksAuthors",
-                keyColumns: new[] { "BookId", "AuthorId" },
                 keyValues: new object[] { 3, 1 });
-
-            migrationBuilder.DeleteData(
-                table: "BooksAuthors",
-                keyColumns: new[] { "BookId", "AuthorId" },
-                keyValues: new object[] { 3, 2 });
-
-            migrationBuilder.DeleteData(
-                table: "BooksAuthors",
-                keyColumns: new[] { "BookId", "AuthorId" },
-                keyValues: new object[] { 3, 3 });
 
             migrationBuilder.DeleteData(
                 table: "BooksAuthors",
@@ -156,27 +121,62 @@ namespace BookLibrary.DAL.Migrations
             migrationBuilder.DeleteData(
                 table: "BooksAuthors",
                 keyColumns: new[] { "BookId", "AuthorId" },
-                keyValues: new object[] { 4, 2 });
-
-            migrationBuilder.DeleteData(
-                table: "BooksAuthors",
-                keyColumns: new[] { "BookId", "AuthorId" },
-                keyValues: new object[] { 4, 3 });
-
-            migrationBuilder.DeleteData(
-                table: "BooksAuthors",
-                keyColumns: new[] { "BookId", "AuthorId" },
                 keyValues: new object[] { 5, 1 });
 
             migrationBuilder.DeleteData(
                 table: "BooksAuthors",
                 keyColumns: new[] { "BookId", "AuthorId" },
-                keyValues: new object[] { 5, 2 });
+                keyValues: new object[] { 6, 2 });
 
             migrationBuilder.DeleteData(
                 table: "BooksAuthors",
                 keyColumns: new[] { "BookId", "AuthorId" },
-                keyValues: new object[] { 5, 3 });
+                keyValues: new object[] { 7, 2 });
+
+            migrationBuilder.DeleteData(
+                table: "BooksAuthors",
+                keyColumns: new[] { "BookId", "AuthorId" },
+                keyValues: new object[] { 8, 2 });
+
+            migrationBuilder.DeleteData(
+                table: "BooksAuthors",
+                keyColumns: new[] { "BookId", "AuthorId" },
+                keyValues: new object[] { 9, 2 });
+
+            migrationBuilder.DeleteData(
+                table: "BooksAuthors",
+                keyColumns: new[] { "BookId", "AuthorId" },
+                keyValues: new object[] { 10, 2 });
+
+            migrationBuilder.DeleteData(
+                table: "BooksAuthors",
+                keyColumns: new[] { "BookId", "AuthorId" },
+                keyValues: new object[] { 11, 2 });
+
+            migrationBuilder.DeleteData(
+                table: "BooksAuthors",
+                keyColumns: new[] { "BookId", "AuthorId" },
+                keyValues: new object[] { 12, 2 });
+
+            migrationBuilder.DeleteData(
+                table: "BooksAuthors",
+                keyColumns: new[] { "BookId", "AuthorId" },
+                keyValues: new object[] { 13, 3 });
+
+            migrationBuilder.DeleteData(
+                table: "BooksAuthors",
+                keyColumns: new[] { "BookId", "AuthorId" },
+                keyValues: new object[] { 14, 3 });
+
+            migrationBuilder.DeleteData(
+                table: "BooksAuthors",
+                keyColumns: new[] { "BookId", "AuthorId" },
+                keyValues: new object[] { 15, 3 });
+
+            migrationBuilder.DeleteData(
+                table: "BooksAuthors",
+                keyColumns: new[] { "BookId", "AuthorId" },
+                keyValues: new object[] { 16, 3 });
 
             migrationBuilder.DeleteData(
                 table: "BooksGenres",
@@ -252,6 +252,11 @@ namespace BookLibrary.DAL.Migrations
                 table: "BooksGenres",
                 keyColumns: new[] { "BookId", "GenreId" },
                 keyValues: new object[] { 15, 3 });
+
+            migrationBuilder.DeleteData(
+                table: "BooksGenres",
+                keyColumns: new[] { "BookId", "GenreId" },
+                keyValues: new object[] { 16, 1 });
 
             migrationBuilder.DeleteData(
                 table: "Author",
@@ -342,6 +347,11 @@ namespace BookLibrary.DAL.Migrations
                 table: "Book",
                 keyColumn: "Id",
                 keyValue: 15);
+
+            migrationBuilder.DeleteData(
+                table: "Book",
+                keyColumn: "Id",
+                keyValue: 16);
 
             migrationBuilder.DeleteData(
                 table: "Genre",
