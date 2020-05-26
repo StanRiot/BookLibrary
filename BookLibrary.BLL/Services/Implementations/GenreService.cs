@@ -26,7 +26,13 @@ namespace BookLibrary.BLL.Services.Implementations
 
         public Genre Get(int id)
         {
-            return _unitOfWork.Genres.Read(id);
+            var genre = _unitOfWork.Genres.Read(id);
+            if (genre == null)
+            {
+                throw new EntityNotFoundException();
+            }
+
+            return genre;
         }
 
         public IEnumerable<Genre> GetAll()
@@ -42,6 +48,12 @@ namespace BookLibrary.BLL.Services.Implementations
         public void Delete(Genre entity)
         {
             _unitOfWork.Genres.Delete(entity);
+        }
+
+        public void Delete(int id)
+        {
+            var genre = Get(id);
+            Delete(genre);
         }
     }
 }

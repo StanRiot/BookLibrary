@@ -31,7 +31,13 @@ namespace BookLibrary.BLL.Services.Implementations
 
         public Author Get(int id)
         {
-            return _unitOfWork.Authors.Read(id);
+            var author = _unitOfWork.Authors.Read(id);
+            if (author == null)
+            {
+                throw new EntityNotFoundException();
+            }
+
+            return author;
         }
 
         public IEnumerable<Author> GetAll()
@@ -42,6 +48,12 @@ namespace BookLibrary.BLL.Services.Implementations
         public Author Update(Author entity)
         {
             return _unitOfWork.Authors.Update(entity);
+        }
+
+        public void Delete(int id)
+        {
+            var author = Get(id);
+            Delete(author);
         }
     }
 }

@@ -12,6 +12,7 @@ namespace BookLibrary.BLL.Services.Interfaces
         public IEnumerable<T> GetAll();
         public T Update(T entity);
         public void Delete(T entity);
+        public void Delete(int id);
 
     }
 }
