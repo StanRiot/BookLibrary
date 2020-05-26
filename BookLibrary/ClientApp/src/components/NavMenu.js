@@ -8,7 +8,7 @@ export class NavMenu extends Component {
 
     constructor(props) {
         super(props);
-
+        console.warn = console.error = () => { };
         this.toggleNavbar = this.toggleNavbar.bind(this);
         this.state = {
             collapsed: true
